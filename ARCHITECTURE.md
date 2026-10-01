@@ -17,4 +17,39 @@ Protocols for assigning work, exchanging artifacts, checking results, and mainta
 ### 5. Evaluation
 Tests and observations that separate reproducible behavior from interpretation or hypothesis.
 
-The architecture is intentionally tool-agnostic so individual services can change without invalidating the project documentation.
+## Integrated reference architecture
+
+The `integrated-agent-001` experiment instantiates the layers in one executable path:
+
+```
+                 +--------------------+
+                 |   Research Agent   |
+                 +----------+---------+
+                            |
+              +-------------+-------------+
+              |                           |
+       +------v------+              +-----v------+
+       |   Memory    |              | ML Policy  |
+       | persistent  |              | verify?    |
+       +------+------+              +-----+------+
+              |                       |
+              |                 +-----v------+
+              |                 | Tool Call  |
+              |                 |    add     |
+              |                 +-----+------+
+              |                       |
+              +-----------------------+
+                                      |
+                              +-------v--------+
+                              | Independent    |
+                              |   Verifier     |
+                              +-------+--------+
+                                      |
+                              +-------v--------+
+                              | Memory write   |
+                              +----------------+
+```
+
+The architecture is deliberately modular: the in-memory model, tool implementation, or ML policy can be replaced without changing the experiment contract.
+
+The ML classifier is a routing component, not a claim about consciousness or general intelligence.
