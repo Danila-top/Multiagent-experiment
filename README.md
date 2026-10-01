@@ -1,21 +1,25 @@
-# AI-triumvirate
+# Multiagent-experiment
 
 > Superposition of self-awareness.
 
-A research/project repository for experiments and documentation around interacting AI systems, persistent context, self-reflection, and multi-agent coordination.
+The central experimental repository for interacting AI systems, multi-agent coordination, shared context, tool use, and reproducible experiments.
 
-## Direction
+## Relationship to the other repositories
 
-The repository is intended to separate durable project artifacts from conversational experiments and to make important ideas reproducible.
+- `AI-agents-laboratory` designs individual agents.
+- `AI-memory-and-context` designs persistent context.
+- `AI-tools-and-integrations` defines capabilities and connector boundaries.
+- This repository combines those components into multi-agent experiments.
+- `Machine-learning-experiments` provides quantitative experiments and benchmarks when models or ML components are involved.
 
-## Core themes
+## Experiment rule
 
-- multi-agent AI coordination
-- persistent context and knowledge management
-- self-reflection and metacognitive experiments
-- tool use and agent infrastructure
-- documentation of hypotheses, tests, and observations
+Separate:
 
-## Repository rule
+1. hypothesis;
+2. observable setup;
+3. actions;
+4. measurements;
+5. interpretation.
 
-Record experiments as observations and distinguish documented results from hypotheses.
+Do not treat an agent's self-description as independent evidence of an internal state.
